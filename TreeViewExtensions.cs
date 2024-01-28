@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Rapid.OSTandPSTParser
+namespace OSTandPSTParser
 {
     public static class TreeViewExtensions
     {
-        public static IEnumerable<TreeNode> Descendants(this TreeNodeCollection c)
+        public static IEnumerable<TreeNode> Descendants(this TreeNodeCollection TreeNodes)
         {
-            foreach (var node in c.OfType<TreeNode>())
+            foreach (TreeNode node in TreeNodes.OfType<TreeNode>())
             {
                 yield return node;
 

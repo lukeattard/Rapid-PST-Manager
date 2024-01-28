@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
 
-namespace Rapid.OSTandPSTParser.Inputs
+namespace OSTandPSTParser.Inputs
 {
   internal class InputPST : IInputFormat
   {
@@ -35,5 +35,7 @@ namespace Rapid.OSTandPSTParser.Inputs
     internal override MapiMessage ExtractMessage(MessageInfo message) => sourceFile.ExtractMessage(message);
 
     internal override FolderInfo GetFolderById(string folderId) => sourceFile.GetFolderById(folderId);
+    internal PersonalStorage MailStore { get { return sourceFile; } set { sourceFile = value; } }
+
   }
 }

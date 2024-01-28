@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rapid.OSTandPSTParser.Inputs
+namespace OSTandPSTParser.Inputs
 {
     internal abstract class IInputFormat
     {

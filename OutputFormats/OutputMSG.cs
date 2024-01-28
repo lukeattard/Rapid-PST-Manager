@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Rapid.OSTandPSTParser.OutputFormats
+namespace OSTandPSTParser.OutputFormats
 {
     internal class OutputMSG : IOutputFormat
     {

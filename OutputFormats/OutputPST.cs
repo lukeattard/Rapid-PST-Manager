@@ -1,6 +1,6 @@
 ﻿using Aspose.Email.Mapi;
 using Aspose.Email.Storage.Pst;
-using Rapid.OSTandPSTParser.Inputs;
+using OSTandPSTParser.Inputs;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,8 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
-namespace Rapid.OSTandPSTParser.OutputFormats
+namespace OSTandPSTParser.OutputFormats
 {
   internal class OutputPST : IOutputFormat
   {
@@ -81,5 +82,26 @@ namespace Rapid.OSTandPSTParser.OutputFormats
     {
       DataFile.Dispose();
     }
+
+    //internal void GetMessages(TreeNode nodePath)
+    //{
+    //  FolderInfo folder = InputProvider.GetFolderById(nodePath.Name.Split('|')[0]);
+
+    //  MessageInfoCollection messages = folder.GetContents();
+
+    //  List<MapiMessage> messagesList = new List<MapiMessage>();
+    //  foreach (MessageInfo message in messages)
+    //  {
+    //    MapiMessage mapiTemp = InputProvider.ExtractMessage(message);
+    //  //  messagesList.Add(mapiTemp);
+    //      MailTreeView
+    //  }
+
+    //  //TreeNode tmpTreeNode = e.Node;
+    //  //List<String> nodePath = tmpTreeNode.GetNamesPath();
+    //  //nodePath = nodePath.Skip(1).Select(n => n.Split('|')[1]).ToList();
+
+    //  //FolderInfo folder = InputProvider.GetFolderById(node.Name.Split('|')[0]);
+    //}
   }
 }
